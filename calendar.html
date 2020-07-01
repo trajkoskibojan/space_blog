@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Календар</title>
+  <meta name="keywords" content="Project_2" />
+  <meta name="description" content="Project_2" />
+  <meta name="author" content="Project_2" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/query.css" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="nav-wrap first">
+      <div class="navbar-header">
+        <li class="btn-position">
+          <a href="#" class="bt btn-black line-none"><svg class="plus_icon">
+              <use xlink:href="./assets/icons/plus.svg#Layer_1"></use>
+            </svg>&nbsp;&nbsp;Приклучи Се</a>
+        </li>
+        <button type="button" class="navbar-toggle collapsed first" data-toggle="collapse" data-target="#bs-navbar"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="./assets/img/logo.jpg" alt="LOGO" /></a>
+      </div>
+      <div class="collapse navbar-collapse first" id='bs-navbar'>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="home-nav"><a href="blog.html">Space Блог</a></li>
+          <li class="home-nav"><a href="calendar.html" class="btn-border">Настани</a></li>
+          <li class="home-nav"><a href="#">Co-Working</a></li>
+          <li class="home-nav"><a href="akademii.html">Академии</a></li>
+          <li class="home-nav"><a href="events.html">Простор За Настани</a></li>
+          <li class="home-nav before"><a data-toggle="modal" href='#form-partner'>Партнерства</a></li>
+          <li class="last desk">
+            <a href="#" class="bt btn-black line-none"><svg class="plus_icon">
+                <use xlink:href="./assets/icons/plus.svg#Layer_1"></use>
+              </svg>&nbsp;&nbsp;Приклучи Се</a>
+          </li>
+          <li class="home-nav last mob">
+            <a href="#" class="bt btn-yellow line-none"><svg class="plus_icon_mob">
+                <use xlink:href="./assets/icons/plus.svg#Layer_1"></use>
+              </svg>&nbsp;&nbsp;Приклучи Се</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="calendar-top py-3">
+      <div class="container-fluid">
+        <div class="row d-flex">
+          <div class="com-md-6 col-sm-6 col-xs-12">
+            <h2 class="h2-style mb-2">Календар</h2>
+          </div>
+          <div class="com-md-6 col-sm-6 col-xs-12">
+            <div class="calendar-controls text-right d-flex">
+              <a id="prevBtn">
+                <svg class="arrow_circule__icon">
+                  <use xlink:href="./assets/icons/arrow_circule_left.svg#Capa_1"></use>
+                </svg>
+              </a>
+              <span class="calendar-months">
+                <h4 class="h4-style" id="montyAndYear">Април 2020</h4>
+              </span>
+              <a id="nextBtn">
+                <svg class="arrow_circule__icon">
+                  <use xlink:href="./assets/icons/arrow_circule_right.svg#Capa_1"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calendar-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 px-08">
+            <div class="calendar-header mb-3">
+              <div class="header-cell">НЕД</div>
+              <div class="header-cell">ПОН</div>
+              <div class="header-cell">ВТО</div>
+              <div class="header-cell">СРЕ</div>
+              <div class="header-cell">ЧЕТ</div>
+              <div class="header-cell">ПЕТ</div>
+              <div class="header-cell">САБ</div>
+            </div>
+            <div id="calendar-body">
+              <!-- will be filled dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calendar-events">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="h3-style mb-3">Следни Настани</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-12 before-blue">
+            <p class="text-white mb-0">04/05.03.2020</p>
+            <h4 class="h4-style text-white mb-2">Deep Dive into Data Science</h4>
+            <h4 class="font-weight mb-0">10:00 - 18:00ч</h4>
+          </div>
+          <div class="col-sm-6 col-xs-12 before-red">
+            <p class="text-white">25/26.03.2020</p>
+            <h4 class="h4-style text-white">Deep Dive into Marketin</h4>
+            <h4 class="font-weight mb-0">10:00 - 18:00ч</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer py-10">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 col-sm-8">
+          <div class="row row-inner d-f">
+            <div class="col-md-6 col-sm-4 col-xs-12 mb-2 js--wp-10">
+              <div class="content-links">
+                <h4 class='mb-3'>Корисни Линкови</h4>
+                <ul class="footer-ul">
+                  <li><a href="#" data-toggle="popover" title="Бојан Трајкоски"
+                      data-content="Е-маил: bojan.trajkoski.mk@gmail.com Тел: 070/318-931">Контакт</a></li>
+                  <li><a href="https://www.wearelaika.com/">Отворени Позиции</a></li>
+                  <li><a
+                      href="https://medium.com/wearelaika/brainster-space-the-new-home-of-the-local-tech-community-in-skopje-ffe97b564152">Галерија</a>
+                  </li>
+                  <li><a href="calendar.html">Календар</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-4 col-xs-12 js--wp-10">
+              <div class="content-social">
+                <h4 class="mb-3">Социјални Мрежи</h4>
+                <ul class="footer-ul-social">
+                  <li><a href=""><svg class="sc_icon">
+                        <use xlink:href="./assets/icons/facebook.svg#Capa_1"></use>
+                      </svg></a></li>
+                  <li><a href=""><svg class="sc_icon">
+                        <use xlink:href="./assets/icons/linkedin.svg#Capa_1"></use>
+                      </svg></a></li>
+                  <li><a href=""><img src="./assets/icons/instagram.svg" alt="insta" class="sc_icon"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-4 text-right col-sm-4 col-xs-12 js--wp-10">
+          <a href="index.html"><img src="./assets/img/logo_footer.jpg" alt="logo_footer"
+              class="logo_footer pulsate"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="subfooter">COPYRIGHT&copy;BrainsterSpace.All Rights Reserved</div>
+
+  <div class="popup-form d-none">
+    <div class="container-new">
+      <div class="message signup">
+        <a href="#" class="close-icon">
+          <svg class="close_icon">
+            <use xlink:href="./assets/icons/close.svg#Layer_1"></use>
+          </svg></a>
+        <div class="btn-wrapper">
+          <button class="button" id="signup">Пријави Се</button>
+          <button class="button" id="login">Логирај Се</button>
+        </div>
+      </div>
+      <div class="form form--signup">
+        <h3 class="form--heading mb-3">Добредојде! Пријави Се</h3>
+        <form autocomplete="off" class="form-sign-log" action="./assets/php/process-form.php" method="POST">
+          <input type="text" placeholder="Име" required>
+          <input type="email" placeholder="Е-маил" required>
+          <input type="password" placeholder="Лозинка" required>
+          <button type="submit" class="button">Пријави Се</button>
+        </form>
+      </div>
+      <div class="form form--login">
+        <h3 class="form--heading mb-3">Добредојде назад! </h3>
+        <form autocomplete="off" class="form-sign-log" action="./assets/php/process-form.php" method="POST">
+          <input type="text" placeholder="Име" required>
+          <input type="password" placeholder="Лозинка" required>
+          <button type="submit" class="button">Логирај Се</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="form-partner">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title h3-style">Приклучи се</h3>
+        </div>
+        <div class="modal-body">
+          <form action="#" method="GET" class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="name" class="text-partners">Име и Презиме (задолжително)
+                <span class="nameValid">Внесете Име и Презиме</span>
+              </label>
+              <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
+                placeholder="Внесете Име и Презиме" data-content="blur" required>
+            </div>
+            <div class="form-group">
+              <label for="company" >Име на компанија (незадолжително)</label>
+              <input type="text" class="form-control" name="company" id="company" aria-describedby="helpId"
+                placeholder="Внесете Име на Вашате Компанија" data-content="blur">
+            </div>
+            <div class="form-group">
+              <label for="telephone" class="text-partners">Телефонски Број (задолжително)
+                <span class="telValid">Внесете Телефонски Број</span>
+              </label>
+              <input type="number" name="telephone" id="telephone" class="form-control" value="" min="" max="" step=""
+                required="required" title="" data-content="blur" placeholder="Внесете Телефонски Број">
+            </div>
+            <div class="form-group">
+              <label for="textarea" class="text-partners">Предлог за Соработка (незадолжително)<span
+                  class="msg-strings">300</span></label>
+              <textarea class="form-control" data-content="blur" name="textarea" id="textarea" rows="5" maxlength="300"
+                placeholder="Во 300 карактери, опишете зошто сакате да соработуваме"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="bt btn-white line-none" data-dismiss="modal">Исклучи</button>
+              <button type="submit" class="bt btn-black line-none validation"><svg class="arrow_icon">
+                  <use xlink:href="./assets/icons/right-arrow.svg#Layer"></use>
+                </svg>&nbsp;&nbsp;Испрати форма</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./assets/js/jquery.waypoints.min.js"></script>
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
